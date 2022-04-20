@@ -1,0 +1,34 @@
+---
+import MenuLayout from './MenuLayout.astro'
+import FootLayout from './FootLayout.astro'
+// src/layouts/BaseLayout.astro
+const {title} = Astro.props;
+---
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Javier" />
+    <meta name="keywords" content="HTML, CSS, Astro" />
+    <title>Herramientas Laboratorio - {title}</title>
+    <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/base.css')} />     
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <div id="logo">
+          <!-- Aquí irá el logo -->
+          <a href="/home">
+            <img class="logo" src="/assets/logo.png" />
+          </a>
+        </div>
+        <MenuLayout></MenuLayout>        
+      </div>
+    </div> <!-- header -->
+    <!-- ======= Bloque de página ======= -->
+    <div class="main">      
+      <slot />
+    </div>
+    <!-- ======== Pie de página ========= -->
+    <FootLayout></FootLayout>
+  </body>
+</html>

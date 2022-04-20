@@ -1,0 +1,40 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro'
+const allPosts = Astro.fetchContent('./blog/*.md');
+
+// Sort posts based on date
+allPosts.sort((a,b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+})
+---
+<BaseLayout title="Homepage">
+  <h1>Blog</h1>
+  <p>Últimas entradas de mi blog</p>
+
+  {allPosts.map((post) => (
+    <div class="blog-post">  
+      <div class="title">{post.title}</div>      
+      <div class="content">
+        <p>{post.short}</p>
+      </div>
+      <a class="readmore" href={post.url}>Leer más</a> <small class="date">{post.date}</small>
+    </div>  
+  ))}
+
+  
+</BaseLayout>
+
+<style>
+.blog-post {
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.readmore {
+  transition: 200ms;
+}
+.readmore:hover {
+  font-size: 1.1em;
+  transition: 200ms;
+}
+</style>

@@ -1,0 +1,188 @@
+:root {
+  --color1: #fafcfc;
+  --color2: #63cc45;
+  --color3: #7ed267;
+  --color4: #99d889;
+  --color5: #b4dfab;
+  --color6: #b4dfab;
+  --fg-dark: #ffffff;
+  --font1: 'Fira Sans Condensed', sans-serif;
+  --font2: 'Special Elite', cursive;
+}
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font1);
+}
+
+body {
+  background-color: var(--color1);
+  color: var(--color2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color5);
+  font-family: var(--font2);
+  margin-bottom: 0.5em;
+}
+
+#header {
+  background-color: var(--color3);
+  color: var(--fg-dark);
+  min-height: 2em;
+}
+
+#header .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+#header a {
+  color: inherit;
+}
+
+#menu ul {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  margin-right: 1em;
+}
+
+#menu ul li {
+  list-style: none;
+  padding: 0.5em;
+}
+
+.box {
+  min-height: 2em;
+  width: 100%;
+}
+
+.box.color1 {
+  background-color: var(--color1);
+}
+
+.box.color2 {
+  background-color: var(--color2);
+}
+
+.box.color3 {
+  background-color: var(--color3);
+}
+
+.box.color4 {
+  background-color: var(--color4);
+}
+
+.box.color5 {
+  background-color: var(--color5);
+}
+
+.blog-post .title {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.blog-post p {
+  margin-bottom: 0.6em;
+}
+
+.blog-top {
+  font-family: Fira Sans Condensed;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #b4290d;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.foot {
+  background-color: var(--color2);
+  color: var(--color1);
+  font-size: 0.8em;
+  text-align: center;
+  padding: 2em;
+  margin-top: 2em;
+}
+
+.foot .links ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 2em auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.links ul li {
+  list-style: none;
+}
+
+img.logo {
+  filter: drop-shadow(0px 0px 2px var(--color4));
+}
+
+img.logo:hover {
+  filter: drop-shadow(2px 2px 2px var(--color5));
+}
+
+.list-of-arts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.art-preview {
+  border: 1px solid #888;
+  padding: 0.5em;
+}
+
+.art-preview .art-picture {
+  width: 100%;
+  height: 100px;
+  background-color: gray;
+}
+
+.art-preview .description {
+  display: block;
+  font-size: 0.7em;
+  padding-top: 0.5em;
+}
+
+.art-detail {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1em;
+}
+
+.art-detail .art-picture {
+  width: 100%;
+  height: 400px;
+  background-color: gray;
+}
+
+.art-detail .description {
+  display: block;
+  font-size: 1em;
+  padding-top: 0.5em;
+}

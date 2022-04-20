@@ -1,0 +1,80 @@
+---
+import imgReference from '../assets/logo.png';
+---
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ramón" />
+    <meta name="keywords" content="HTML, CSS, Astro" />
+    <title>Catálogo arte de Escuela IDEO - Blog</title>    
+    <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/base.css')} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;400;600;900&family=Special+Elite&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <div id="logo">
+        <!-- Aquí irá el logo -->
+        <a href="/home">          
+          <img src={imgReference}/>
+        </a>
+      </div>
+      <div id="menu">      
+        <!-- Aquí irá el listado de opciones -->
+        <ul>
+          <li>
+            <a href="/about">Acerca de</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            <a href="/contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div> <!-- header -->
+    <!-- ======= Bloque de página ======= -->
+    <div class="main">
+      <h1>Css example</h1>
+
+      <div class="colors">
+        <div class="box color1"></div>
+        <div class="box color2"></div>
+        <div class="box color3"></div>
+        <div class="box color4"></div>
+        <div class="box color5"></div>
+      </div>
+
+      <p class="blog-top">Últimas entradas de mi blog</p>
+      <div class="blog-post">
+        <div class="title">Ejemplo de título</div>
+        <div class="content">
+          <p>hola buenas Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum pharetra ex in commodo. Pellentesque consequat, justo a porttitor sagittis, nulla mi bibendum quam, vitae aliquam augue nisl quis erat. Etiam vel commodo sapien, eget ultrices sapien. Curabitur vitae varius lorem. Proin eu fermentum ligula. Donec quam odio, rhoncus id sem eget, dictum rhoncus magna. Quisque vel urna eros. Aliquam efficitur ornare lacus quis lobortis. Vivamus tempus sem vel dui dignissim congue. Donec et risus tortor. Cras eleifend mi eu est commodo mattis sed vitae odio. Aenean non neque mattis, gravida quam sit amet, consectetur risus. Nam eget scelerisque tellus. Phasellus mollis, mi vel malesuada hendrerit, tellus eros elementum odio, vel consequat nunc justo tristique nisl.</p>
+          <p>Cras ac mi elit. Nulla enim magna, ultrices a urna quis, congue pellentesque erat. Morbi commodo quam id mi facilisis pharetra. Proin ultrices quam ultrices lectus condimentum viverra. Nullam et dictum ligula, nec fermentum neque. Curabitur congue faucibus tempor. Sed pharetra mauris neque, eu congue mauris suscipit sit amet. Praesent porttitor efficitur ultrices.</p>
+          <p>Pellentesque non ipsum eget nibh dapibus sodales. Aliquam pretium a risus non facilisis. Nunc ante sem, efficitur sed tincidunt et, pharetra eget tellus. In pellentesque facilisis eros, at condimentum enim facilisis nec. Curabitur ex mi, commodo ac posuere vitae, tempor et nulla. Aliquam erat volutpat. Nam tincidunt, dolor et laoreet dictum, velit urna sollicitudin lorem, nec rhoncus magna velit eget ante. Sed nec accumsan augue, in fermentum justo. Aenean in lectus egestas, auctor nisl vitae, pellentesque magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus quis tortor non libero ullamcorper pharetra vel eu nunc. Nullam luctus felis ac justo blandit sollicitudin vehicula in massa.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ======== Pie de página ========= -->
+    <div class="foot">
+      <p>Proyecto para la asignatura de Tecnologías de la Información I de Escuela IDEO</p>
+      <p>Autor de la página: Javier R</p>
+      
+      <div class="links">
+        <ul>
+          <li>
+            <a href="/about">Acerca de</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            <a href="/contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

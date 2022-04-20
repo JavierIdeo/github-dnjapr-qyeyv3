@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { Markdown } from 'astro/components'
+import Airtable from 'airtable';
+
+export async function getStaticPaths() {
+
+  let apiKey = import.meta.env.AIRTABLE_API_KEY;  
+  let airtable = new Airtable({apiKey}).base('appQRvIgRbgoETqQs');
+
+  let elements = await airtable('Art').select({
+    view: 'Grid view'
+  }).firstPage();
+
+  return elements.map((record) => ({
+    params: { id: record.id },
+    props: {
+      ...record.fields
+    }
+  }));
+}
+
+const {slug} = Astro.request.params;
+const art = Astro.props;
+---
+<BaseLayout title="Homepage">
+  <h1>
+  <a href="/arts">Obras</a> &lt;
+   {art.Name}
+  </h1>
+  
+  <div class="art-detail">
+    <div class="art-picture">
+      <img src={art.Attachments[0].url}/>      
+    </div>
+    <div class="description">
+        <Markdown>
+          {art.Notes}    
+        </Markdown>    
+    </div>
+  </div>
+</BaseLayout>
