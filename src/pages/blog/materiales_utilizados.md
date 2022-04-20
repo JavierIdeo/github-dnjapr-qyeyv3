@@ -72,3 +72,4 @@ Desde el curso pasado se puede optar por este bachillerato en nuestro colegio, s
 <div class="col-md-4">
 					<img src="https://static5.depositphotos.com/1030113/401/v/950/depositphotos_4017385-stock-illustration-science-laboratory-safety-signs.jpg" width="100%">
 			 </div>
+/
